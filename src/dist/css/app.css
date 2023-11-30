@@ -2166,7 +2166,7 @@ video {
 
 @media (min-width: 768px) {
   .icons-list .each p {
-    font-size: 60px;
+    font-size: 57px;
     line-height: 21px;
   }
 }
@@ -3067,6 +3067,20 @@ p{
 .newsletter-widget{
   -webkit-clip-path: polygon(0px 0px, 97% 0, 100% 20px, 100% 100%, 20px 100%, 0 40px);
           clip-path: polygon(0px 0px, 97% 0, 100% 20px, 100% 100%, 20px 100%, 0 40px);
+}
+
+.sectors-list .each img:not(.sec-logo),
+.our-vision .image img,
+.img-text-section .right img,
+.business-own .each:nth-child(odd) .right img,
+.news-detail-content img{
+  -webkit-clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+          clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+}
+
+.business-own .each:nth-child(even) .right img{
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+          clip-path: polygon(0 0, 100% 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px));
 }
 
 @media (min-width: 640px) {

@@ -90,7 +90,16 @@ p{
 .btn{ clip-path: polygon(0px 0px, calc(100% - 20px) 0, 100% 18px, 100% 100%, 20px 100%, 0 40px, 20px 100%, 0 40px);}
 .footer .newsletter .btn{ clip-path: none;}
 .newsletter-widget{ clip-path: polygon(0px 0px, 97% 0, 100% 20px, 100% 100%, 20px 100%, 0 40px);}
-
+.sectors-list .each img:not(.sec-logo),
+.our-vision .image img,
+.img-text-section .right img,
+.business-own .each:nth-child(odd) .right img,
+.news-detail-content img{
+  clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+}
+.business-own .each:nth-child(even) .right img{
+  clip-path: polygon(0 0, 100% 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+}
 
 
 @layer components {
@@ -405,7 +414,7 @@ p{
    .sectors-list .each .sec-logo{
     @apply absolute left-10 bottom-10 max-h-[60px] max-w-[190px]
    }
-
+   
    /* Video CTA Sec */
    .video-cta-sec{
     @apply relative flex items-center h-[567px] bg-black
@@ -721,7 +730,7 @@ p{
       @apply font-NeueHaasbold text-secondary 
       text-[8.7vw] leading-none 
       sm:text-[40px]
-      md:text-[60px] md:leading-[21px]
+      md:text-[57px] md:leading-[21px]
       xl:text-[75px]
     }
     .icons-list.pl-0 .each .icon{
