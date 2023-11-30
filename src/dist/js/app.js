@@ -5,6 +5,33 @@ document.addEventListener("DOMContentLoaded", function (event) {
     "load",
     function (e) {
 
+
+
+      let revealContainers = document.querySelectorAll(".mask");
+
+      revealContainers.forEach((container) => {
+        let image = container.querySelector("img");
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: container,
+            toggleActions: "restart none none reset"
+          }
+        });
+
+        tl.set(container, { autoAlpha: 1 });
+        tl.from(container, 1.1, {
+          xPercent: -100,
+          ease: Power2.out
+        });
+        tl.from(image, 1.1, {
+          xPercent: 100,
+          scale: 1.3,
+          delay: -1.1,
+          ease: Power2.out
+        });
+      });
+
+      
       // function showpanel() {   
       
 // }

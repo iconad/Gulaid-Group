@@ -624,6 +624,9 @@ p{
     .news-detail-content img{
       @apply mb-10
     }
+    .news-detail-content .mask{
+      @apply invisible relative w-full h-full overflow-hidden
+     }
     .share{
       @apply flex gap-4 my-24
     }
@@ -652,6 +655,9 @@ p{
       block
       md:flex
     }
+    .img-text-section .mask{
+      @apply invisible relative w-full h-full overflow-hidden
+     }
     .img-text-section .right{
       @apply mb-12
     }
@@ -790,6 +796,9 @@ p{
       text-[20px] 
       xl:text-[21px] 
     }
+    .business-own .each .mask{
+      @apply invisible relative w-full h-full overflow-hidden
+     }
     .business-own .each:nth-child(even) .left{
       @apply 
       xl:text-white xl:order-2 xl:pl-20 
@@ -835,9 +844,9 @@ p{
       md:text-[45px]
       xl:w-6/12 xl:pl-32 xl:ml-auto
     }
-    .our-vision .image{
-      
-    }
+    .our-vision .image .mask{
+      @apply invisible relative w-full h-full overflow-hidden
+     }
     .our-vision img{
       @apply mb-10 max-h-[378px]
     }

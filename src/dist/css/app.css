@@ -1900,6 +1900,14 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.news-detail-content .mask {
+  visibility: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 .share {
   margin-top: 6rem;
   margin-bottom: 6rem;
@@ -1964,6 +1972,14 @@ video {
   .img-text-section {
     display: flex;
   }
+}
+
+.img-text-section .mask {
+  visibility: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .img-text-section .right {
@@ -2309,7 +2325,17 @@ video {
   .business-own .each .left p {
     font-size: 21px;
   }
+}
 
+.business-own .each .mask {
+  visibility: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (min-width: 1280px) {
   .business-own .each:nth-child(even) .left {
     order: 2;
     padding-left: 5rem;
@@ -2409,7 +2435,12 @@ video {
   }
 }
 
-.our-vision .image{
+.our-vision .image .mask {
+  visibility: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .our-vision img {
