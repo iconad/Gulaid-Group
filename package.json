@@ -1,0 +1,16 @@
+{
+  "name": "capital-vaults",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "watch": "tailwindcss -i ./src/global.css -o ./src/dist/css/app.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "gsap": "file:gsap-bonus.tgz"
+  }
+}

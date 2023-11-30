@@ -1,0 +1,896 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------- */
+/* Global Styling */
+/* ------------- */
+
+html {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "NeueHaasDisplayRoman", sans-serif;
+  line-height: 1;
+  font-size: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+img{
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "NeueHaasDisplayBold", serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+h1{
+  font-size:80px;
+}
+h2{
+  font-size: 70px;
+  margin-bottom: 40px;
+}
+h3{
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+p{
+  line-height: 21px;
+}
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+}
+@media(max-width:1279px){
+  .container, .our-vision{ max-width: 768px;}
+  h1{ font-size: 70px;}
+  h2 { font-size: 60px;margin-bottom: 30px;}
+  h3 { font-size: 38px;}
+  .our-vision::before{ display: none;}
+  .our-vision .image{ padding-left: 0!important;}
+  .our-vision .text{ padding-right: 0!important;}
+  .our-vision h3{ width: 100%; margin-bottom: 30px;}
+  .our-vision{ margin-left: auto; margin-right: auto;}
+  .business-own::before{ display: none;}
+  .business-own .each:last-child .left{ margin-bottom: 0;}
+}
+@media(max-width:768px){
+  .container,
+  .our-vision h3, .our-vision .text{ max-width: 90%;}
+  .img-text-section .left{ padding-left: 0!important;}
+  .our-vision h3, .our-vision .text{ margin-left: auto; margin-right: auto;}
+  .img-text-section.mission .left{ margin-bottom: 0;}
+  .icons-list.pf-0 .each:first-child{ padding-top: 0;}
+  .icons-list.pl-0 .each:last-child{ padding-bottom: 0;}
+}
+@media(max-width:639px){
+  .hero-banner .hero-content h1{ font-size: 9.4vw;}
+  h3 { font-size: 32px;}
+  h2 { font-size: 42px; margin-bottom: 22px;}
+  .post.content-overlay .content::before{ border-width: 50px 50px 0 0;}
+  .get-in-touch h4 br{ display: none;}
+}
+
+/* --------------- */
+/* Tailwind Theme */
+/* ------------- */
+.header .btn{ clip-path: polygon(0 0, 90% 0, 100% 26%, 100% 100%, 10% 100%, 0 76%);}
+.btn{ clip-path: polygon(0px 0px, calc(100% - 20px) 0, 100% 18px, 100% 100%, 20px 100%, 0 40px, 20px 100%, 0 40px);}
+.footer .newsletter .btn{ clip-path: none;}
+.newsletter-widget{ clip-path: polygon(0px 0px, 97% 0, 100% 20px, 100% 100%, 20px 100%, 0 40px);}
+
+
+
+@layer components {
+  /* Global */
+  
+  .home {
+    @apply overflow-x-hidden;
+  }
+  .btn{
+    @apply inline-block px-10 text-center tracking-[.5px] relative overflow-hidden z-10 
+
+    h-[3.4rem] py-[1.20rem] min-w-[220px]
+    sm:h-[3.488rem] sm:py-[1.30rem] sm:min-w-[270px]
+  }
+  .btn span{
+    background-color: #000;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  color: #ffffff;
+  display: block;
+  height: 0;
+  position: absolute;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  /* -webkit-transition: height 1s, width 1s;
+  -moz-transition: height 1s, width 1s;
+  -ms-transition: height 1s, width 1s;
+  -o-transition: height 1s, width 1s; */
+  transition: height .3s, width .3s;
+  width: 0;
+  z-index: -1;
+  }
+  .btn:hover > span {
+    height: 500px;
+    width: 500px;
+  }
+  /* Default Elements */
+  .heading {
+    @apply text-white uppercase font-bold text-2xl sm:text-4xl md:text-5xl lg:text-[4.68rem] tracking-tight leading-none;
+  }
+  /* Header */
+  .header{
+    @apply py-7 fixed left-0 right-0 top-0 z-30;
+  }
+  .header .container{ 
+    @apply xl:max-w-none xl:px-14 xl:flex justify-between items-center;
+   }
+   .header .container .logo{
+    @apply flex-none float-left xl:float-none
+   }
+   .header .container .main-navigation{
+    @apply flex-initial mt-6 xl:mt-0 hidden xl:block
+   }
+   .header .container .main-navigation ul{
+    @apply xl:flex items-center
+   }
+   .header .container .main-navigation ul li{
+    @apply xl:ml-14 py-5 xl:p-0
+   }
+   .header .container .main-navigation ul li a{
+    @apply font-NeueHaasmedium uppercase tracking-wider relative 
+    text-black xl:text-white 
+    xl:after:absolute xl:after:h-[1px] xl:after:bg-[#fff] xl:after:content-[""] xl:after:bottom-[-10px] xl:after:left-[50%] xl:after:right-[50%] xl:hover:after:left-[0] xl:hover:after:right-[0] xl:after:transition-all
+   }
+   .header .container .main-navigation ul li:last-child a{
+    @apply after:hidden
+   }
+   .header .container .main-navigation .btn{
+    @apply min-w-0 normal-case font-NeueHaasregular text-white block
+   }
+   .header .clear-mobile{
+    @apply clear-both xl:hidden
+   }
+   .header.active{
+    @apply bg-white
+   }
+   .header.active .container .logo{
+    @apply invert xl:invert-0
+   }
+   .header.active .container .main-navigation{
+    @apply h-auto
+   }
+   .header.active .container .main-navigation ul li{
+    @apply border-t-[1px] border-slate-100 last:border-0 first:border-0
+   }
+   .mobile-menu-btn{
+    @apply xl:hidden w-[26px] float-right mt-14
+   }
+   .mobile-menu-btn span{
+    @apply block h-[3px] bg-white rounded-full my-[5px]
+   }
+   .header.active .mobile-menu-btn span{
+    @apply bg-black
+   }
+   .mobile-menu-overlay{
+    @apply
+    bg-black/[.8] fixed left-0 top-0 w-full h-full z-20 hidden
+   }
+
+   /* Footer */
+  .footer .newsletter .container{ 
+    @apply xl:flex justify-between items-center;
+   }
+   .footer .newsletter h4{
+    @apply text-white uppercase 
+    mb-6 text-[30px]
+    sm:text-[38px]
+    xl:mb-0 xl:text-[40px]
+   }
+   .newsletter-widget{
+    @apply h-14 rounded-full w-full
+    max-w-[99.8%]
+    xl:max-w-xl
+   }
+   .newsletter-widget form{
+    @apply flex
+   }
+  .footer .newsletter{
+    @apply bg-primary py-[70px]
+   }
+   .footer .newsletter input{
+    @apply h-14 outline-none pl-7
+    w-[60%]
+    sm:w-[65%]
+   }
+   .footer .newsletter .btn{
+    @apply h-14 min-w-0 pt-[21px] pl-0 pr-0 
+    w-[40%]
+    sm:w-[35%]
+   }
+   .footer-middle{
+    @apply py-16 items-center
+    block
+    xl:flex
+   }
+   .footer-logo{
+    @apply border-[#5C8A74] py-6
+    border-b-8 mb-14
+    xl:pr-11 xl:mr-11 xl:border-r-8 xl:border-b-0 xl:mb-0
+   }
+   .footer-logo img{
+    @apply
+    max-w-[100px]
+    sm:max-w-[190px]
+    xl:max-w-none
+   }
+   .footer-col-1{
+    @apply xl:w-[25%]
+   }
+   .footer-col-1 > div{
+    @apply flex
+   }
+   .footer-col-1 > div strong{
+    @apply mr-4 w-[30px]
+   }
+   .footer-col-1 > div strong svg{
+    @apply mx-auto
+   }
+   .footer-col-1,
+   .footer-col-2{
+    @apply mb-14
+    xl:mb-0
+   }
+   .footer-col-2 h3,
+   .footer-col-3 h3{
+    @apply mb-6
+    xl:mb-10
+   }
+   .footer-col-2 ul li{
+    @apply m-0
+    xl:mb-3
+   }
+   .footer-col-2 ul li a,
+   .footer-col-1 a{
+    @apply hover:text-primary transition-all
+   }
+   .footer-col-2 ul li a{
+    @apply 
+    bg-[url('../../assets/img/angle-right.svg')] bg-no-repeat bg-[right_10px_center]
+    xl:bg-none
+   }
+   .footer-col-2 ul li a{
+    @apply 
+    block border-b border-slate-100 py-4
+    xl:border-0 xl:p-0
+   }
+   .footer-col-2 ul li:last-child a{
+    @apply border-0
+   }
+   .social-nav ul{
+    @apply flex
+   }
+   .social-nav li{
+    @apply mr-[14px]
+   }
+   .social-nav li a{
+    @apply w-9 h-9 border border-black rounded-full hover:border-primary transition-all flex justify-center
+   }
+   .social-nav li a img{
+    @apply self-center
+   }
+   .social-nav li:first-child a img{
+    @apply -ml-[2px]
+   }
+   .footer-col-2, .footer-col-3{
+    @apply self-start ml-auto
+   }
+   .footer-bottom{
+    @apply border-t border-[#DEDEDE] py-5 text-sm
+    text-left
+    xl:text-center
+   }
+
+   /* Home About */
+   .home-about{
+    @apply relative
+    py-32
+    sm:py-44
+   }
+   .about-bg{
+    @apply h-[1137px] absolute left-0 -top-[350px] right-0 bg-no-repeat -z-10
+   }
+   .home-about .text{
+    @apply 
+    mb-12
+    md:mb-16
+   }
+   .home-about .text p{
+    @apply first:text-primary first:mb-8 first:font-NeueHaasmedium first:tracking-wide first:max-w-[48.125rem]
+    first:text-[32px] first:leading-[2.325rem]
+    md:first:text-[40px] md:first:leading-[2.625rem]
+   }
+   .home-about .text p{
+    @apply text-lg max-w-[800px] tracking-[.3px]
+   }
+   .counters{
+    @apply flex flex-wrap
+   }
+   .counters .counter-each{
+    @apply border-gray-200 w-6/12 pt-16 first:pt-10 [&:nth-child(2)]:pt-10
+    xl:border-r xl:w-[28%] xl:[&:nth-child(2)]:w-[28%] xl:[&:nth-child(2)]:pt-36 xl:[&:nth-child(3)]:pt-72 xl:pl-12 xl:last:border-0 xl:first:pl-0 xl:first:w-[16%] xl:last:pt-[420px] xl:py-6 xl:h-[620px]
+    /* w-6/12 first:border-r first:border-b [&:nth-child(2)]:border-b [&:nth-child(2)]:pl-14 [&:nth-child(3)]:border-r [&:nth-child(4)]:pl-14 pb-14 [&:nth-child(3)]:pt-14 [&:nth-child(4)]:pt-14 */
+   }
+   .counters .counter-each p{
+    @apply 
+    text-[19px]
+    sm:text-[21px]
+   }
+   .counter{
+    @apply text-[#000] font-NeueHaasmedium 
+    text-[19vw] -tracking-[3px]
+    sm:text-[110px] sm:-tracking-[5px]
+    xl:text-[120px]
+   }
+   .counter .small{
+    @apply text-[45%] -tracking-[1px]
+   }
+   .counter label{
+    @apply
+    -ml-[3px] text-[60px]
+    sm:-ml-[0] sm:text-[120px]
+   }
+
+    /* Hero Banner */
+   .hero-banner{ 
+    @apply h-screen bg-black relative flex items-end;
+    }
+    .hero-banner video{
+    @apply absolute left-0 top-0 w-full h-full object-cover opacity-90
+    }
+    .hero-banner .hero-content{
+    @apply text-white pb-[13vh] relative
+    }
+
+   /* Home Sectors */
+   .home-sectors{
+    @apply pt-36 pb-36 xl:pb-44 bg-secondary text-white relative
+   }
+   .home-sectors .sectors-bg{
+    @apply h-[1137px] absolute left-0 top-0 right-0 bg-no-repeat bg-right-top
+   }
+   .home-sectors .sectors-bg-2{
+    @apply h-[253px] w-[130px] absolute bottom-10 right-0 bg-no-repeat bg-right-top
+   }
+   .home-sectors .container{
+    @apply relative
+   }
+   .home-sectors h2{
+    @apply mb-8
+   }
+   .home-sectors p{
+    @apply text-xl max-w-[950px] tracking-[.6px]
+   }
+   .sectors-list{
+    @apply flex flex-wrap xl:gap-10 gap-5 pt-14;
+   }
+   .sectors-list .each{
+    @apply relative overflow-hidden
+    w-[100%]
+    md:w-[48.7%]
+    xl:w-[31.1%] 
+   }
+   .sectors-list .each .mask{
+    @apply invisible relative w-full h-full max-w-[500px] overflow-hidden
+   }
+   .sectors-list .each .sec-logo{
+    @apply absolute left-10 bottom-10 max-h-[60px] max-w-[190px]
+   }
+
+   /* Video CTA Sec */
+   .video-cta-sec{
+    @apply relative flex items-center h-[567px] bg-black
+   }
+   .video-cta-sec video{
+    @apply absolute left-0 top-0 w-full h-full object-cover opacity-80
+   }
+   .video-cta-sec h3{
+    @apply text-white mb-10 
+   }
+   .video-cta-sec .container{
+    @apply relative
+   }
+
+   /* Marquee */
+   .marquee-secton{
+    @apply font-NeueHaasmedium text-secondary relative overflow-hidden
+    text-[80px] py-36
+    md:text-[130px]
+    xl:py-64 xl:text-[200px]
+   }
+   .marquee-secton .marquee-inner{
+    @apply flex w-fit flex-auto flex-row 
+   }
+   .marquee-secton .marquee-inner .marquee-part{
+    @apply flex items-baseline shrink-0 py-1 px-6 gap-12
+   }
+
+   /* Empower Sec */
+   .empower-sec{
+    @apply 
+    py-32
+    md:py-40
+   }
+   .empower-sec .container{
+    @apply items-center
+    block
+    md:flex
+   }
+   .empower-sec .left{
+    @apply 
+    w-full
+    md:w-2/4
+   }
+   .empower-sec .left img{
+    @apply
+    mb-20 
+    sm:max-h-[500px]
+    md:max-h-full md:mb-0
+   }
+   .empower-sec .right{
+    @apply ml-auto
+    w-full
+    md:w-[42%]
+    xl:w-2/6 
+   }
+   .empower-sec .right p{
+    @apply mb-14 
+   }
+
+   
+   /* Home Media Centre */
+   .home-media-cente{
+    @apply py-20
+   }
+   .blog-list{
+    @apply flex gap-5 flex-wrap 
+    mb-12
+    md:mb-20
+   }
+   .post{
+    @apply h-auto relative
+   }
+   .post .thumbnail img{
+    @apply 
+    h-[260px] w-full object-bottom object-cover
+    sm:h-auto
+   }
+   .post h3{
+    @apply normal-case font-NeueHaasmedium self-end mt-auto mb-0 mr-auto
+    text-[26px]
+    md:text-[27px]
+   }
+   .post .content{
+    @apply p-10 min-h-[226px] bg-[#eee] flex flex-col
+   }
+   .post .content .date{
+    @apply text-sm uppercase font-NeueHaasmedium tracking-wide
+   }
+   .post.content-overlay .content{
+    @apply left-0 top-0 bottom-0 
+    p-10 static 
+    md:p-16 md:absolute md:text-white md:bg-transparent 
+   }
+   .post.content-overlay .content::before{
+      content: "";
+      position: absolute; left: 0; top: 0;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 100px 100px 0 0;
+      border-color: #fff transparent transparent transparent;
+   }
+   .post.content-overlay .content h3{
+    @apply 
+    text-[26px]
+    md:text-[32px]
+   }
+   .post.content-only,
+   .post.content-only .content{
+    @apply h-full
+   }
+   .post.content-only .content::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 50px 50px;
+    border-color: transparent transparent #fff transparent;
+    content: "";
+    position: absolute; right: 0; bottom: 0;
+    }
+
+    /* Contact Us Page */
+    .map{
+      @apply 
+      h-[80vh] bg-black bg-[url(../../assets/img/map.jpg)]
+      sm:h-screen
+    }
+    .subpage{
+      @apply 
+      py-24
+      md:py-36
+      xl:py-40
+    }
+    .contact-us-content{
+      @apply flex 
+      flex-wrap
+      md:flex-nowrap
+    }
+    .contact-us-left{
+      @apply 
+      md:w-6/12
+    }
+    .contact-us-left h3{
+      @apply text-secondary mb-16
+    }
+    .contact-us-left .each{
+      @apply mb-12 last:mb-0
+      md:mb-16
+    }
+    .contact-us-left .each svg{
+      @apply mb-3
+      w-[45px]
+      xl:w-auto
+    }
+    .contact-us-left .each p{
+      @apply max-w-[260px]
+    }
+    .contact-us-left .each a{
+      @apply hover:text-primary transition-all
+    }
+    .contact-us-right{
+      @apply 
+      -order-1 mb-28 max-w-none
+      md:max-w-[50%] md:mb-0 md:order-1
+    }
+    .contact-us-right h2{
+      @apply text-secondary mb-2 text-[40px]
+    }
+
+    /* Media Centre */
+    .subpage-banner{
+      @apply h-[439px] bg-black text-white bg-no-repeat bg-cover bg-center
+    }
+    .subpage-banner .container{
+      @apply flex h-full items-end flex-wrap
+      pb-12
+      md:pb-20
+    }
+    .subpage-banner h1{
+      @apply 
+      text-[44px]
+      md:text-[60px]
+    }
+    .subpage-banner.detail{
+      @apply h-screen
+    }
+    .subpage-banner.detail h1{
+      @apply normal-case 
+      text-[38px]
+      md:text-[55px]
+    }
+    .subpage-banner.detail .date{
+      @apply inline-block bg-blue mb-6 p-2 px-6 mr-4
+    }
+    .news-detail-content{
+      @apply max-w-[797px] mx-auto
+    }
+    .news-detail-content p{
+      @apply mb-7
+    }
+    .news-detail-content img{
+      @apply mb-10
+    }
+    .share{
+      @apply flex gap-4 my-24
+    }
+    .share p{
+      @apply font-NeueHaasmedium
+    }
+    .related-news > h3{
+      @apply mb-10 normal-case 
+      text-[40px]
+      md:text-[55px]
+    }
+    .related-news .blog-list{
+      @apply mb-0
+    }
+    .lead-text{
+      @apply mt-4 mb-32 text-primary font-NeueHaasmedium max-w-[670px]
+      text-[30px]
+      sm:text-[32px]
+      md:text-4xl
+    }
+    .lead-text p{
+      @apply leading-9
+    }
+    .img-text-section{
+      @apply items-center gap-20
+      block
+      md:flex
+    }
+    .img-text-section .right{
+      @apply mb-12
+    }
+    .img-text-section .left,
+    .img-text-section .right{
+      @apply 
+      w-full
+      md:w-6/12
+    }
+    .img-text-section .left{
+      @apply 
+      mb-20 max-w-[90%] mx-auto
+      md:mb-0
+    }
+    .img-text-section .left h2{
+      @apply text-secondary normal-case mb-6
+      text-[40px]
+      md:text-[55px]
+    }
+    .img-text-section.mission .left h2{
+      @apply
+      mb-2
+      xl:mb-6
+    }
+    .img-text-section.mission .left p{
+      @apply 
+      text-[19px]
+      xl:text-[21px]
+    }
+    .featured-jobs-sec{
+      @apply pt-32
+    }
+    .featured-jobs-sec h2{
+      @apply text-secondary normal-case mb-2
+      text-[40px]
+      md:text-[55px]
+    }
+    .jobs-list{
+      @apply flex gap-10 mt-20 flex-wrap
+    }
+    .job{
+      @apply border border-gray-100 
+      w-full p-10 
+      xl:w-[48.3%] md:p-12 
+    }
+    .job h3{
+      @apply normal-case mb-8
+      text-[31px]
+      md:text-[35px]
+    }
+    .job ul{
+      @apply ml-4 font-NeueHaasmedium mb-7
+    }
+    .job p{
+      @apply mb-7
+    }
+    .job ul li{
+      @apply list-disc mb-3
+    }
+    .job .btn{
+      @apply mt-10 block
+    }
+    .job .btn:hover > span{
+      @apply w-[1000px]
+    }
+    .icons-list .each{
+      @apply border-b border-primary last:border-0 items-center
+      block py-12
+      md:flex md:py-16
+    }
+    .icons-list .each .icon{
+      @apply w-32
+    }
+    .icons-list .each .icon svg{
+      @apply w-[60px] max-h-[50px] mb-4
+      md:w-auto md:max-h-full md:mb-0
+    }
+    .icons-list .each p{
+      @apply font-NeueHaasbold text-secondary 
+      text-[8.7vw] leading-none 
+      sm:text-[40px]
+      md:text-[60px] md:leading-[21px]
+      xl:text-[75px]
+    }
+    .icons-list.pl-0 .each .icon{
+      @apply w-[180px]
+    }
+    .text-block{
+      @apply py-32 max-w-[775px]
+    }
+    .text-block p{
+      @apply text-[21px] leading-7
+    }
+    .get-in-touch{
+      @apply 
+      pt-24
+      md:pt-32
+      xl:pb-20 xl:pt-56
+    }
+    .get-in-touch h4{
+      @apply normal-case leading-none tracking-tight
+      text-[40px] mb-8
+      sm:text-[50px] sm:mb-10
+      md:text-[60px] md:mb-12
+      xl:text-[80px] xl:mb-16
+    }
+    .bottom-graphic{
+      @apply bg-no-repeat 
+      bg-none
+      xl:bg-[url(../../assets/img/get-in-touch-bg.svg)]
+    }
+    .business-own:before{
+      content: "";
+      position: absolute; right: 0; top: 0; bottom: 0; z-index: -1;
+      width: 50%;
+      background: url(../../assets/img/business-graphic.svg) no-repeat right center #5D8A76;
+      background-size: contain;
+    }
+    .business-own{
+      @apply relative 
+      py-0
+      xl:py-48
+    }
+    .business-own .each{
+      @apply items-center 
+      flex flex-wrap
+      xl:flex
+    }
+    .business-own .each .left{
+      @apply pr-0
+      w-full mb-14
+      xl:w-6/12 xl:mb-0 xl:pr-20
+    }
+    .business-own .each .left p{
+      @apply leading-7 
+      text-[20px] 
+      xl:text-[21px] 
+    }
+    .business-own .each:nth-child(even) .left{
+      @apply 
+      xl:text-white xl:order-2 xl:pl-20 
+    }
+    .business-own .each .left img{
+      @apply max-h-[80px] max-w-[200px] mb-8
+    }
+    .business-own .each .left p{
+      @apply mb-10
+    }
+    .business-own .each .right{
+      @apply 
+      w-full -order-1 mb-12
+      xl:w-6/12 xl:order-1 xl:mb-0
+    }
+    .our-team{
+      
+    }
+    .team-members{
+      @apply flex gap-10
+    }
+    .team img{
+      @apply mb-10
+    }
+    .team h3{
+      @apply normal-case text-[27px] mb-1
+    }
+    .our-vision:before{
+      content: "";
+      position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: -1;
+      width: 50%;
+      background: url(../../assets/img/mission-graphic.svg) no-repeat left 0 #5D8A76; background-size: contain;
+    }
+    .our-vision{
+      @apply relative flex flex-wrap 
+      mt-32 mb-8
+      xl:mt-44 xl:py-20
+      xl:py-32 xl:mb-24
+    }
+    .our-vision h3{
+      @apply mb-10 
+      text-[40px]
+      md:text-[45px]
+      xl:w-6/12 xl:pl-32 xl:ml-auto
+    }
+    .our-vision .image{
+      
+    }
+    .our-vision img{
+      @apply mb-10 max-h-[378px]
+    }
+    .our-vision .text{
+      @apply
+      w-full ml-0 pl-0
+      xl:w-6/12 xl:ml-auto xl:pl-32 
+    }
+    .our-vision p{
+      @apply 
+      text-[19px] leading-6
+      md:text-[21px] md:leading-7
+    }
+    .cf7{
+      @apply mt-10
+    }
+    .input-field{
+      @apply border border-slate-300 w-full mb-4 h-[47px] px-6
+    }
+    .select-field{
+      @apply border border-slate-300 w-full mb-4 h-[47px] px-6 bg-transparent text-[#a1a8b1];
+    }
+    .textarea-field{
+      @apply border border-slate-300 w-full mb-4 h-[144px] px-6 py-4
+    }
+    .popup-overlay{
+      @apply fixed left-0 top-0 w-full h-full z-30 bg-black/[.70] hidden
+    }
+    .popup{ 
+      @apply hidden w-[1000px]
+      /* max-w-[1000px] bg-white fixed z-40 left-[50%] -translate-x-[50%] opacity-0 invisible transition-all duration-200
+      top-[50px] bottom-[0] w-full p-11 pt-12
+      sm:p-14 sm:bottom-auto
+      md:top-[150px] md:w-[90%] md:p-20  */
+    }
+    .popup h2{
+      @apply normal-case text-secondary mb-5 
+      text-[40px] mb-2
+      sm:text-[46px] sm:mb-3
+      md:text-[60px] md:mb-5 
+    }
+    .popup .close-popup{
+      @apply w-[30px] h-[30px] bg-[url(../../assets/img/cross.svg)] float-right bg-contain cursor-pointer
+    }
+    .popup-active .popup-overlay{
+      @apply block
+    }
+    .popup-active .popup{
+      @apply opacity-100 visible 
+      top-[0px]
+      md:top-[50px]
+    }
+    .popup ul{
+      @apply ml-4 font-NeueHaasmedium my-7
+    }
+    .popup p{
+      @apply mb-7
+    }
+    .popup ul li{
+      @apply list-disc mb-3
+    }
+    .popup .email{
+      @apply font-NeueHaasmedium
+    }
+    .popup .email a{
+      @apply hover:text-primary
+    }
+}

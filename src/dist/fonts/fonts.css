@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'NeueHaasDisplayBlack';
+    src: url('NeueHaasDisplayBlack.eot');
+    src: url('NeueHaasDisplayBlack.eot') format('embedded-opentype'),
+         url('NeueHaasDisplayBlack.woff2') format('woff2'),
+         url('NeueHaasDisplayBlack.woff') format('woff'),
+         url('NeueHaasDisplayBlack.ttf') format('truetype'),
+         url('NeueHaasDisplayBlack.svg#NeueHaasDisplayBlack') format('svg');
+}
+@font-face {
+    font-family: 'NeueHaasDisplayRoman';
+    src: url('NeueHaasDisplayRoman.eot');
+    src: url('NeueHaasDisplayRoman.eot') format('embedded-opentype'),
+         url('NeueHaasDisplayRoman.woff2') format('woff2'),
+         url('NeueHaasDisplayRoman.woff') format('woff'),
+         url('NeueHaasDisplayRoman.ttf') format('truetype'),
+         url('NeueHaasDisplayRoman.svg#NeueHaasDisplayRoman') format('svg');
+}
+@font-face {
+    font-family: 'NeueHaasDisplayMedium';
+    src: url('NeueHaasDisplayMediu.eot');
+    src: url('NeueHaasDisplayMediu.eot') format('embedded-opentype'),
+         url('NeueHaasDisplayMediu.woff2') format('woff2'),
+         url('NeueHaasDisplayMediu.woff') format('woff'),
+         url('NeueHaasDisplayMediu.ttf') format('truetype'),
+         url('NeueHaasDisplayMediu.svg#NeueHaasDisplayMediu') format('svg');
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayBold';
+    src: url('NeueHaasDisplayBold.eot');
+    src: url('NeueHaasDisplayBold.eot') format('embedded-opentype'),
+         url('NeueHaasDisplayBold.woff2') format('woff2'),
+         url('NeueHaasDisplayBold.woff') format('woff'),
+         url('NeueHaasDisplayBold.ttf') format('truetype'),
+         url('NeueHaasDisplayBold.svg#NeueHaasDisplayBold') format('svg');
+}
+@font-face {
+    font-family: 'NeueHaasDisplayLight';
+    src: url('NeueHaasDisplayLight.eot');
+    src: url('NeueHaasDisplayLight.eot') format('embedded-opentype'),
+         url('NeueHaasDisplayLight.woff2') format('woff2'),
+         url('NeueHaasDisplayLight.woff') format('woff'),
+         url('NeueHaasDisplayLight.ttf') format('truetype'),
+         url('NeueHaasDisplayLight.svg#NeueHaasDisplayLight') format('svg');
+}

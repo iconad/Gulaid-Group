@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gulaid Group</title>
+
+    <!-- Main Style -->
+    <link href="./dist/css/app.css" rel="stylesheet" />
+
+    <!-- Libs -->
+    <link href="./dist/css/aos.css" rel="stylesheet" />
+    <link href="./dist/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="./dist/css/jquery.fancybox.min.css" rel="stylesheet" />
+
+    <!-- Fonts CDN -->
+
+    <link href="./dist/fonts/fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Main -->
+    <main id="main-wrapper">
+      <div id="main-content" class="bg-wrap home">
+
+        <!-- Header -->
+        <header class="header" id="header">
+          <div class="container">
+            <a href="index.html" class="logo">
+              <img src="assets/img/logo.png" alt="" width="94" />
+            </a>
+            <a href="javascript:void(0);" class="mobile-menu-btn" id="mobile-menu-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+            <div class="clear-mobile"></div>
+            <nav id="site-navigation" class="main-navigation">
+              <ul>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="sectors.html">Sectors</a></li>
+                <li><a href="media-centre.html">Media Centre</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="#enquire-now" data-fancybox class="btn bg-primary tracking-[0px]"><span></span>Enquire Now</a></li>
+              </ul>
+            </nav><!-- #site-navigation -->
+          </div>
+        </header>
+
+        <!-- Enquire Now Popup -->
+        <div class="popup" id="enquire-now">
+          <h2>Enquire Now</h2>
+          <p>All fields marked (*) are mandatory.</p>
+          <form action="" class="cf7">
+            <input type="text" name="" id="" placeholder="Name" class="input-field">
+            <input type="text" name="" id="" placeholder="Company Name*" class="input-field">
+            <input type="text" name="" id="" placeholder="Job Title *" class="input-field">
+            <input type="text" name="" id="" placeholder="Email Address*" class="input-field">
+            <input type="text" name="" id="" placeholder="Phone Number *" class="input-field">
+            <select name="" id="" class="select-field">
+              <option value="Subject">Subject</option>
+            </select>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message" class="textarea-field"></textarea>
+            <button class="btn bg-black text-white"><span class="!bg-primary"></span>Submit</button>
+          </form>
+        </div>
+
+        <!-- mobile menu overlay -->
+        <div class="mobile-menu-overlay"></div>
+
+        <!-- video section -->
+        <section class="hero-banner">
+          <video width="320" height="240" autoplay muted loop>
+            <source src="assets/video/video-1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="hero-content container">
+            <h1 class="mb-12">Building Futures, <br />Holding Values.</h1>
+            <a href="sectors.html" class="btn bg-black"><span class="!bg-secondary"></span>Our Business Sectors</a>
+          </div>
+        </section>
+        
+        <!-- about section -->
+        <section class="home-about">
+          <div class="about-bg bg-[url('../../assets/img/about-bg.svg')]"></div>
+          <div class="container">
+            <h2>ABOUT US</h2>
+            <div class="text">
+              <p>Gulaid Holding was founded in 1993, by Mr. Ahmed Gulaid. Having been a leader in initiating investment in the mining sector in The Kingdom of Saudi Arabia</p>
+              <p>Gulaid Holding is active in sectors crucial to the Kingdoms 2030 vision – including mining, sustainability, asset management, and facilities management.</p>
+            </div>
+            <a href="about-us.html" class="btn bg-[#5D8A76] text-white"><span></span>More About Us</a>
+            <div class="h-32 sm:h-48"></div>
+            <h2 class="text-secondary">We grow with You</h2>
+            <!-- <div >
+              <div class="counter" ></div>
+              <div class="counter" data-TargetNum="7" data-Speed="7000" data-Direction="reverse" data-Easing="linear"></div>
+              <div class="counter" data-TargetNum="80333" data-Speed="2500">0</div>
+          </div> -->
+            <div class="counters" id="counters">
+              <div class="counter-each">
+                <div class="counter">
+                  <span data-TargetNum="2" data-Speed="2000"></span>
+                  <label class="small">bn</label>
+                </div>
+                <p>Group Revenue</p>
+              </div>
+              <div class="counter-each" data-lag="0.1">
+                <div class="counter">
+                  <span data-TargetNum="175" data-Speed="2000"></span>
+                  <label>+</label>
+                </div>
+                <p>Contracts</p>
+              </div>
+              <div class="counter-each" data-lag="0.2">
+                <div class="counter">
+                  <span data-TargetNum="12" data-Speed="2000"></span>
+                  <label>+</label>
+                </div>
+                <p>Countries</p>
+              </div>
+              <div class="counter-each" data-lag="0.3">
+                <div class="counter">
+                  <span data-TargetNum="300" data-Speed="2000"></span>
+                  <label>+</label>
+                </div>
+                <p>Employees</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Business sectors -->
+        <section class="home-sectors">
+          <div class="sectors-bg bg-[url('../../assets/img/sectors-bg.svg')]"></div>
+          <div class="sectors-bg-2 bg-[url('../../assets/img/sectors-bg-2.svg')]"></div>
+          <div class="container">
+            <h2>Business Sectors</h2>
+            <p>Gulaid Holding is active in sectors crucial to the Kingdoms 2030 vision – including mining, sustainability, asset management, and facilities management.</p>
+            <div class="sectors-list">
+              <div class="each">
+                <a href="https://citgroupltd.com/" target="_blank">
+                  <div class="mask">
+                    <img src="assets/img/sectors-img-1.jpg" alt="">
+                  </div>
+                  <img src="assets/img/sectors-img-1-logo.png" class="sec-logo" alt="">
+                </a>
+              </div>
+              <div class="each">
+                <a href="https://www.scmsltd.com/" target="_blank">
+                  <div class="mask">
+                    <img src="assets/img/sectors-img-2.jpg" alt="">
+                  </div>
+                  <img src="assets/img/sectors-img-2-logo.png" class="sec-logo" alt="">
+                </a>
+              </div>
+              <div class="each">
+                <!-- <a href="#."> -->
+                  <div class="mask">
+                    <img src="assets/img/sectors-img-3.jpg" alt="">
+                  </div>
+                  <img src="assets/img/sectors-img-3-logo.png" class="sec-logo" alt="">
+                <!-- </a> -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="marquee-secton">
+          <div class="marquee-inner">
+            <div class="marquee-part">
+              Growth
+              <div class="logo-graphic">
+                <img src="assets/img/marquee-graphic.svg" alt="">
+              </div>
+            </div>
+            <div class="marquee-part">
+              Inspration
+              <div class="logo-graphic">
+                <img src="assets/img/marquee-graphic.svg" alt="">
+              </div>
+            </div>
+            <div class="marquee-part">
+              Excellence
+              <div class="logo-graphic">
+                <img src="assets/img/marquee-graphic.svg" alt="">
+              </div>
+            </div>
+            <div class="marquee-part">
+              Integrity
+              <div class="logo-graphic">
+                <img src="assets/img/marquee-graphic.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-media-center">
+          <div class="container">
+            <h2>Media Centre</h2>
+            <div class="blog-list">
+              <a href="" class="w-[100%] xl:w-[66%] -order-2 xl:order-1">
+                <article class="post content-overlay" data-aos="fade-up" ata-aos-duration="1500" data-aos-offset="300">
+                  <div class="thumbnail">
+                    <img src="assets/img/news-img-1.jpg" alt="">
+                  </div>
+                  <div class="content">
+                    <span class="date">11th Nov, 2023</span>
+                    <h3>Saudi Arabia Pushes Ahead to Become a Global Mining Player</h3>
+                  </div>
+                </article>
+              </a>
+              <a href="" class="w-[50%] xl:w-[32.3%] xl:order-1 hidden xl:block">
+                <article class="post" data-aos="fade-up" ata-aos-duration="1500" data-aos-offset="400">
+                  <div class="thumbnail">
+                    <img src="assets/img/news-img-2.jpg" alt="">
+                  </div>
+                  <div class="content">
+                    <span class="date">11th Nov, 2023</span>
+                    <h3>Navigating geopolitical challenges in critical minerals projects</h3>
+                  </div>
+                </article>
+              </a>
+              <a href="" class="w-[100%] xl:w-[66%] -order-1 xl:order-1">
+                <article class="post block sm:flex" data-aos="fade-up" ata-aos-duration="1500" data-aos-offset="300">
+                  <div class="thumbnail sm:w-6/12">
+                    <img src="assets/img/news-img-3.jpg" alt="">
+                  </div>
+                  <div class="content sm:w-6/12">
+                    <span class="date">11th Nov, 2023</span>
+                    <h3>SGS to Accelerate Investment in Angola's Mining Sector</h3>
+                  </div>
+                </article>
+              </a>
+              <a href="" class="w-[100%] xl:w-[32.3%] xl:order-1">
+                <article class="post content-only" data-aos="fade-up" ata-aos-duration="1500" data-aos-offset="400">
+                  <div class="content !bg-secondary text-white">
+                    <span class="date">11th Nov, 2023</span>
+                    <h3>How Investors Should Approach Bitcoin Miners As The Halving Draws Near</h3>
+                  </div>
+                </article>
+              </a>
+            </div>
+            <a href="media-centre.html" class="btn bg-black text-white"><span class="!bg-primary"></span>Read all News</a>
+          </div>
+        </section>
+
+        <section class="empower-sec">
+          <div class="container">
+            <div class="left" data-lag="0.2">
+              <img src="assets/img/empower-img.jpg" alt="">
+            </div>
+            <div class="right" data-aos="fade-right" data-aos-duration="500" data-aos-offset="200">
+              <h3>Empower Your Ambitions</h3>
+              <p>Discover Rewarding Careers in Gulaid</p>
+              <a href="careers.html" class="btn bg-black text-white min-w-[220px]"><span class="!bg-primary"></span>View Details</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="video-cta-sec">
+          <video width="320" height="240" autoplay muted loop>
+            <source src="assets/video/video-2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="container">
+            <h3>Get in touch with <br>
+              us and increase your investment</h3>
+            <a href="contact-us.html" class="btn bg-black text-white min-w-[220px]"><span class="!bg-secondary"></span>Contact Us</a>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="colophon" class="footer">
+          <div class="newsletter">
+            <div class="container">
+              <h4>Newsletter Subscribe</h4>
+              <div class="newsletter-widget">
+                <form action="">
+                  <input type="text" placeholder="Email Address">
+                  <button class="btn bg-[#000] text-white"><span class="!bg-secondary"></span>Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="footer-middle">
+              <div class="footer-logo">
+                <a href=""><img src="assets/img/footer-logo.svg" alt=""></a>
+              </div>
+              <div class="footer-col-1">
+                <div class="mb-6">
+                  <strong class="block md:mb-[0.313rem] font-NeueHaasbold font-normal">
+                    <svg width="29" height="22" viewBox="0 0 29 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M26.2812 21.8H2.71875C1.32698 21.8 0.2 20.6634 0.2 19.25V2.75C0.2 1.33663 1.32698 0.2 2.71875 0.2H26.2812C27.673 0.2 28.8 1.33663 28.8 2.75V19.25C28.8 20.6634 27.673 21.8 26.2812 21.8ZM2.71875 1.63333C2.09864 1.63333 1.6125 2.12837 1.6125 2.75V19.25C1.6125 19.8716 2.09864 20.3667 2.71875 20.3667H26.2812C26.9014 20.3667 27.3875 19.8716 27.3875 19.25V2.75C27.3875 2.12837 26.9014 1.63333 26.2812 1.63333H2.71875Z" fill="#CCA665" stroke="white" stroke-width="0.4"/>
+                      <path d="M14.2 13.7956V13.782H14C12.7929 13.782 11.6908 13.3015 10.8623 12.4236C10.8623 12.4236 10.8623 12.4236 10.8623 12.4236L1.39165 2.38549L1.39165 2.38549L1.39099 2.38479C1.1255 2.10611 1.13838 1.6573 1.4198 1.39069C1.69953 1.12569 2.1503 1.13852 2.41793 1.4191C2.41803 1.41921 2.41814 1.41932 2.41824 1.41942L11.8878 11.4563C11.8878 11.4564 11.8879 11.4565 11.888 11.4565C12.9952 12.6379 15.0048 12.6379 16.112 11.4565C16.1121 11.4565 16.1122 11.4564 16.1122 11.4563L25.5818 1.43741C25.5818 1.43739 25.5818 1.43737 25.5818 1.43735C25.8494 1.15651 26.3004 1.14359 26.5802 1.40867C26.8616 1.67529 26.8745 2.1241 26.609 2.40278L26.6084 2.40348L17.1377 12.4416C16.3552 13.2707 15.3286 13.7454 14.2 13.7956Z" fill="#CCA665" stroke="white" stroke-width="0.4"/>
+                    </svg>
+                  </strong>
+                  <a href="mailto:g.gulaid@gulaidholding.com" class="relative top-[1px]">g.gulaid@gulaidholding.com</a>
+                </div>
+                <div class="mb-6">
+                  <strong class="block md:mb-[0.413rem] font-NeueHaasbold font-normal">
+                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M25.3224 18.5331L19.0509 15.7267C18.8078 15.6215 18.5423 15.5786 18.2784 15.6018C18.0145 15.625 17.7606 15.7136 17.5395 15.8596C17.5219 15.8708 17.505 15.8832 17.4891 15.8967L14.1953 18.7044C14.122 18.7491 14.0388 18.775 13.9531 18.7799C13.8674 18.7848 13.7818 18.7684 13.7039 18.7323C11.547 17.691 9.31447 15.4757 8.27322 13.3441C8.23638 13.2668 8.21929 13.1816 8.22346 13.096C8.22763 13.0105 8.25294 12.9274 8.29712 12.854L11.1127 9.50581C11.126 9.48987 11.138 9.47261 11.1499 9.45534C11.2955 9.23461 11.3838 8.98113 11.407 8.71775C11.4302 8.45437 11.3875 8.18936 11.2827 7.94659L8.47111 1.68581C8.33537 1.36872 8.10043 1.10422 7.80155 0.932028C7.50268 0.759841 7.15601 0.689262 6.81361 0.730889C5.14225 0.951252 3.60827 1.77249 2.49817 3.04121C1.38807 4.30993 0.77777 5.93937 0.781265 7.62519C0.781265 17.8783 9.12189 26.2189 19.375 26.2189C21.0608 26.2224 22.6903 25.6121 23.959 24.502C25.2277 23.3919 26.0489 21.8579 26.2693 20.1866C26.3106 19.8457 26.2408 19.5007 26.0702 19.2027C25.8995 18.9048 25.6372 18.6699 25.3224 18.5331ZM25.2188 20.0538C25.0312 21.4692 24.3346 22.7679 23.2591 23.707C22.1835 24.6461 20.8028 25.1614 19.375 25.1564C9.70892 25.1564 1.84376 17.2913 1.84376 7.62519C1.83882 6.19738 2.35407 4.81665 3.29318 3.74114C4.2323 2.66564 5.53098 1.96898 6.94642 1.78144C6.96765 1.78012 6.98894 1.78012 7.01017 1.78144C7.11498 1.78233 7.21718 1.8142 7.30391 1.87305C7.39064 1.9319 7.45803 2.01508 7.49759 2.11214L10.3013 8.37292C10.334 8.44944 10.3483 8.53257 10.3429 8.61562C10.3376 8.69867 10.3129 8.77931 10.2707 8.85105L7.45642 12.1979C7.44314 12.2152 7.42986 12.2311 7.4179 12.2497C7.26797 12.479 7.17967 12.7431 7.16152 13.0164C7.14338 13.2898 7.196 13.5632 7.31431 13.8103C8.46845 16.173 10.8485 18.5357 13.2377 19.6899C13.4865 19.8074 13.7615 19.8586 14.0359 19.8383C14.3103 19.8181 14.5748 19.7271 14.8036 19.5743L14.8527 19.5371L18.1505 16.7321C18.221 16.689 18.3008 16.6633 18.3832 16.6571C18.4657 16.6508 18.5484 16.6643 18.6246 16.6963L24.8947 19.5066C25.0005 19.5506 25.0892 19.6277 25.1477 19.7263C25.2061 19.825 25.231 19.9398 25.2188 20.0538Z" fill="#CCA665"/>
+                    </svg>                      
+                  </strong>
+                  <a href="tel:+966 501222237" class="relative top-[4px]">+966 501222237</a>
+                </div>
+                <div>
+                  <strong class="block md:mb-[0.413rem] font-NeueHaasbold font-normal">
+                    <svg width="24" height="31" viewBox="0 0 24 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 29.9982L13.1568 28.7128C14.4695 27.2303 15.6502 25.8238 16.7007 24.486L17.5678 23.3579C21.1887 18.5472 23 14.7289 23 11.9069C23 5.88305 18.0757 1 12 1C5.92433 1 1 5.88305 1 11.9069C1 14.7289 2.81133 18.5472 6.43217 23.3579L7.29933 24.486C8.79797 26.3795 10.3659 28.217 12 29.9982Z" stroke="#CCA665" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="#CCA665" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                      
+                  </strong>
+                  <p>Gulaid Building, Al-Safah Street, <br>Al-Mohamadyyah <br>District, Jeddah 21533</p>
+                </div>
+              </div>
+              <div class="footer-col-2">
+                <h3 class="text-xl">Quick Links</h3>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about-us.html">About Us</a></li>
+                  <li><a href="sectors.html">Sectors</a></li>
+                  <li><a href="media-centre.html">Media Centre</a></li>
+                  <li><a href="careers.html">Careers</a></li>
+                  <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="footer-col-3">
+                <h3 class="text-xl">Social Media</h3>
+                <nav class="social-nav">
+                  <ul>
+                    <li data-lag="0.1"><a href=""><img src="assets/img/facebook.svg" alt=""></a></li>
+                    <li data-lag="0.2"><a href=""><img src="assets/img/instagram.svg" alt=""></a></li>
+                    <li data-lag="0.3"><a href=""><img src="assets/img/x.svg" alt=""></a></li>
+                  </ul>
+              </nav>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="container">
+              <p>&copy; 2023 Copyright. Gulaid Holding. All Rights Reserved</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <!-- Libs -->
+    <script src="./dist/js/libs/swiper-bundle.min.js"></script>
+    <script src="./dist/js/libs/jquery.min.js"></script>
+    <script src="./dist/js/libs/jquery-ui.min.js"></script>
+    <script src="./dist/js/libs/gsap.min.js"></script>
+    <script src="./dist/js/libs/ScrollSmoother.min.js"></script>
+    <script src="./dist/js/libs/ScrollTrigger.min.js"></script>
+    <script src="./dist/js/libs/SplitText.min.js"></script>
+    <script src="./dist/js/libs/ScrollToPlugin.min.js"></script>
+    <script src="./dist/js/libs/aos.js"></script>
+    <script src="./dist/js/libs/multi-animated-counter.js"></script>
+    <script src="./dist/js/libs/jquery.fancybox.min.js"></script>
+
+    <!-- Main -->
+    <script src="./dist/js/app.js"></script>
+
+    <script>
+
+      // Infinite Horizontal Loop
+      function horizontalLoop(items, config) {
+        items = gsap.utils.toArray(items);
+        config = config || {};
+        let tl = gsap.timeline({
+            repeat: config.repeat,
+            paused: config.paused,
+            defaults: { ease: "none" },
+            onReverseComplete: () =>
+              tl.totalTime(tl.rawTime() + tl.duration() * 100),
+          }),
+          length = items.length,
+          startX = items[0].offsetLeft,
+          times = [],
+          widths = [],
+          xPercents = [],
+          curIndex = 0,
+          pixelsPerSecond = (config.speed || 1) * 300,
+          snap =
+            config.snap === false
+              ? (v) => v
+              : gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
+          totalWidth,
+          curX,
+          distanceToStart,
+          distanceToLoop,
+          item,
+          i;
+        gsap.set(items, {
+          // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
+          xPercent: (i, el) => {
+            let w = (widths[i] = parseFloat(
+              gsap.getProperty(el, "width", "px")
+            ));
+            xPercents[i] = snap(
+              (parseFloat(gsap.getProperty(el, "x", "px")) / w) * 100 +
+                gsap.getProperty(el, "xPercent")
+            );
+            return xPercents[i];
+          },
+        });
+        gsap.set(items, { x: 0 });
+        totalWidth =
+          items[length - 1].offsetLeft +
+          (xPercents[length - 1] / 100) * widths[length - 1] -
+          startX +
+          items[length - 1].offsetWidth *
+            gsap.getProperty(items[length - 1], "scaleX") +
+          (parseFloat(config.paddingRight) || 0);
+        for (i = 0; i < length; i++) {
+          item = items[i];
+          curX = (xPercents[i] / 100) * widths[i];
+          distanceToStart = item.offsetLeft + curX - startX;
+          distanceToLoop =
+            distanceToStart + widths[i] * gsap.getProperty(item, "scaleX");
+          tl.to(
+            item,
+            {
+              xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
+              duration: distanceToLoop / pixelsPerSecond,
+            },
+            0
+          )
+            .fromTo(
+              item,
+              {
+                xPercent: snap(
+                  ((curX - distanceToLoop + totalWidth) / widths[i]) * 100
+                ),
+              },
+              {
+                xPercent: xPercents[i],
+                duration:
+                  (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond,
+                immediateRender: false,
+              },
+              distanceToLoop / pixelsPerSecond
+            )
+            .add("label" + i, distanceToStart / pixelsPerSecond);
+          times[i] = distanceToStart / pixelsPerSecond;
+        }
+        function toIndex(index, vars) {
+          vars = vars || {};
+          Math.abs(index - curIndex) > length / 2 &&
+            (index += index > curIndex ? -length : length); // always go in the shortest direction
+          let newIndex = gsap.utils.wrap(0, length, index),
+            time = times[newIndex];
+          if (time > tl.time() !== index > curIndex) {
+            // if we're wrapping the timeline's playhead, make the proper adjustments
+            vars.modifiers = { time: gsap.utils.wrap(0, tl.duration()) };
+            time += tl.duration() * (index > curIndex ? 1 : -1);
+          }
+          curIndex = newIndex;
+          vars.overwrite = true;
+          return tl.tweenTo(time, vars);
+        }
+        tl.next = (vars) => toIndex(curIndex + 1, vars);
+        tl.previous = (vars) => toIndex(curIndex - 1, vars);
+        tl.current = () => curIndex;
+        tl.toIndex = (index, vars) => toIndex(index, vars);
+        tl.times = times;
+        tl.progress(1, true).progress(0, true); // pre-render for performance
+        if (config.reversed) {
+          tl.vars.onReverseComplete();
+          tl.reverse();
+        }
+        return tl;
+      }
+      const marquee = gsap.utils.toArray(".marquee-part");
+      horizontalLoop(marquee, { paused: false, repeat: -1 });
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      let revealContainers = document.querySelectorAll(".mask");
+
+      revealContainers.forEach((container) => {
+        let image = container.querySelector("img");
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: container,
+            toggleActions: "restart none none reset"
+          }
+        });
+
+        tl.set(container, { autoAlpha: 1 });
+        tl.from(container, 1.1, {
+          xPercent: -100,
+          ease: Power2.out
+        });
+        tl.from(image, 1.1, {
+          xPercent: 100,
+          scale: 1.3,
+          delay: -1.1,
+          ease: Power2.out
+        });
+      });
+
+      
+
+    </script>
+    
+  </body>
+</html>
