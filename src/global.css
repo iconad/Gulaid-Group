@@ -151,7 +151,7 @@ p{
   }
   /* Header */
   .header{
-    @apply py-7 fixed left-0 right-0 top-0 z-30;
+    @apply py-7 absolute left-0 right-0 top-0 z-30;
   }
   .header .container{ 
     @apply xl:max-w-none xl:px-14 xl:flex justify-between items-center;
@@ -320,6 +320,14 @@ p{
     @apply border-t border-[#DEDEDE] py-5 text-sm
     text-left
     xl:text-center
+   }
+   .back-to-top{
+    @apply fixed z-10 bg-black w-12 rounded-full 
+    right-[25px] bottom-[25px]
+    sm:right-[40px] sm:bottom-[40px]
+   }
+   .back-to-top img{
+    @apply relative -top-[1px]
    }
 
    /* Home About */

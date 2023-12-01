@@ -5,7 +5,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
     "load",
     function (e) {
 
+      const btt = document.querySelector(".back-to-top");
 
+      btt.addEventListener("click", () => gsap.to(window, {
+        scrollTo: 0
+      }));
+
+      gsap.set(btt, {y: 150});
+      gsap.to(btt, {
+        y: 0, 
+        autoAlpha: 1,
+        duration:1,
+        scrollTrigger: {
+          trigger: "body",
+          start: "top -20%",
+          end: "top -20%",
+          toggleActions: "play none reverse none"
+        }
+      });
 
       let revealContainers = document.querySelectorAll(".mask");
 
@@ -31,13 +48,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
       });
 
-      
-      // function showpanel() {   
-      
-// }
 
-// // use setTimeout() to execute
-// setTimeout(showpanel, 5000)
+
+      // use setTimeout() to execute
+      // setTimeout(showpanel, 5000)
       // Init AOS
       AOS.init();
 
